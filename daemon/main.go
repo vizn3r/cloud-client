@@ -4,8 +4,8 @@ import (
 	_ "embed"
 
 	"github.com/vizn3r/cloud/daemon/server"
-	"github.com/vizn3r/cloud/lib/conf"
-	"github.com/vizn3r/cloud/lib/logger"
+	"github.com/vizn3r/go-lib/conf"
+	"github.com/vizn3r/go-lib/logger"
 )
 
 type GlobalConfig struct {

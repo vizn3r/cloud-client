@@ -5,8 +5,8 @@ import (
 	_ "embed"
 	"os"
 
-	"github.com/vizn3r/cloud/cli/cli"
-	"github.com/vizn3r/cloud/lib/logger"
+	"github.com/vizn3r/client/cli/cli"
+	"github.com/vizn3r/go-lib/logger"
 )
 
 var log = logger.New("CLI", logger.Green)

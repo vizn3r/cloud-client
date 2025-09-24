@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/vizn3r/cloud/lib/logger"
+	"github.com/vizn3r/go-lib/logger"
 )
 
 type ServerConfig struct {
@@ -39,6 +39,9 @@ func Authenticate(email, password string) error {
 	req.Header.Set("Content-Length", fmt.Sprintf("%d", len(data)))
 
 	res, err := client.Do(req)
+	if err != nil {
+		return err
+	}
 	defer res.Body.Close()
 
 	bytes, err := io.ReadAll(res.Body)
